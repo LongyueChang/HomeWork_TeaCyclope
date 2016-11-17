@@ -1,0 +1,44 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+             tools:context="com.example.administrator.fragments.MyFragment">
+
+    <!--<com.handmark.pulltorefresh.library.PullToRefreshListView-->
+        <!--android:id="@+id/pullToRefresh"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:visibility="gone"-->
+        <!--app:ptrHeaderBackground="#8800"-->
+        <!--app:ptrHeaderTextColor="#00f"-->
+        <!--app:ptrShowIndicator="true"-->
+        <!--app:ptrAnimationStyle="rotate"-->
+        <!--app:ptrDrawable="@drawable/loading"-->
+        <!--&gt;</com.handmark.pulltorefresh.library.PullToRefreshListView>-->
+
+
+    <!-- TODO: Update blank fragment layout -->
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/empty"
+        android:layout_centerInParent="true"
+        android:text="数据为空"/>
+
+    <Button
+        android:id="@+id/up_page"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:background="@mipmap/lv_backtotop"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

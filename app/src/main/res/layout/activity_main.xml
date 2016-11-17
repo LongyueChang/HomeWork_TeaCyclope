@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.administrator.homework_teacyclope.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/totlelayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/taball"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <RadioGroup
+                android:id="@+id/tables"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="9"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rd_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:textSize="20sp"
+                    android:textColor="@drawable/textcolor_select"
+                    android:text="头条"/>
+
+                <RadioButton
+                    android:id="@+id/rd_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:textSize="20sp"
+                    android:textColor="@drawable/textcolor_select"
+                    android:text="百科"/>
+
+                <RadioButton
+                    android:id="@+id/rd_3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:textSize="20sp"
+                    android:textColor="@drawable/textcolor_select"
+                    android:text="咨询"/>
+
+                <RadioButton
+                    android:id="@+id/rd_4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:textSize="20sp"
+                    android:textColor="@drawable/textcolor_select"
+                    android:text="经营"/>
+
+                <RadioButton
+                    android:id="@+id/rd_5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:textSize="20sp"
+                    android:textColor="@drawable/textcolor_select"
+                    android:text="数据"/>
+            </RadioGroup>
+
+            <RadioButton
+                android:id="@+id/dr_cent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:onClick="drawer"
+                android:background="@mipmap/more"/>
+
+        </LinearLayout>
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="9"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/drawer_table"
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="right"
+        android:background="#ded4c7"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/drawer_title_table"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/dr_rt_right"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:onClick="drawer"
+                android:background="@mipmap/searchbackbtn"/>
+
+            <TextView
+                android:id="@+id/dr_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="茶百科"
+                android:gravity="center"
+                android:textSize="30sp"/>
+
+            <Button
+                android:id="@+id/dr_home"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:onClick="drawer"
+                android:background="@mipmap/righttopbutton"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#3e9e03"/>
+
+
+        <TextView
+            android:id="@+id/dr_text_prompt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="6dp"
+            android:text="热门搜索：茶"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/dr_search_table"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:background="#dad9d9">
+
+            <EditText
+                android:id="@+id/dr_ed_search"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:hint="关键字"/>
+
+            <Button
+                android:id="@+id/dr_bt_search"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="搜索"
+                android:onClick="drawer"
+                android:background="#3e9e03"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="6dp"
+            android:textStyle="bold"
+            android:text="我的收藏"/>
+
+        <Button
+            android:id="@+id/dr_bt_collect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="6dp"
+            android:onClick="drawer"
+            android:text="收藏"/>
+
+        <Button
+            android:id="@+id/dr_bt_about"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="6dp"
+            android:onClick="drawer"
+            android:text="关于"/>
+
+        <Button
+            android:id="@+id/dr_hist_about"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="6dp"
+            android:onClick="drawer"
+            android:text="历史记录"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="6dp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:text="版本信息"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="6dp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:text="意见反馈"/>
+
+    </LinearLayout>
+
+</android.support.v4.widget.DrawerLayout>

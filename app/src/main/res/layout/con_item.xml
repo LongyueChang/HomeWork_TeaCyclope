@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+    <RelativeLayout
+        android:id="@+id/re_tables"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_weight="4">
+
+        <TextView
+            android:id="@+id/m_titleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_alignParentLeft="true"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:text="新闻标题栏栏来标题"/>
+
+        <TextView
+            android:id="@+id/m_descriptText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_below="@id/m_titleText"
+            android:layout_alignLeft="@id/m_titleText"
+            android:layout_alignRight="@id/m_titleText"
+            android:text="文章内容"/>
+
+        <TextView
+            android:id="@+id/m_souceText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/m_descriptText"
+            android:layout_alignLeft="@id/m_descriptText"
+            android:text="soucetext"/>
+
+        <TextView
+            android:id="@+id/m_nickText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/m_souceText"
+            android:layout_alignBottom="@id/m_souceText"
+            android:layout_marginLeft="15dp"
+            android:text="nicktext"/>
+
+
+        <TextView
+            android:id="@+id/m_timeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/m_nickText"
+            android:layout_alignBottom="@id/m_nickText"
+            android:layout_marginLeft="15dp"
+            android:text="时间"/>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/m_image_show"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_weight="1"
+        android:layout_marginRight="10dp"
+        android:layout_alignParentRight="true"
+        android:src="@mipmap/ic_launcher"/>
+
+</LinearLayout>

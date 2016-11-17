@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="4"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/collect_table_adper">
+
+        <TextView
+            android:id="@+id/collect_title_adper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:text="标题"/>
+
+        <TextView
+            android:id="@+id/collect_source_adper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/collect_title_adper"
+            android:layout_marginTop="10dp"
+            android:text="source"/>
+
+        <TextView
+            android:id="@+id/collect_time_adper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/collect_source_adper"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/collect_source_adper"
+            android:text="time"/>
+
+        <TextView
+            android:id="@+id/collect_author_adper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/collect_time_adper"
+            android:layout_toRightOf="@id/collect_time_adper"
+            android:layout_marginLeft="10dp"
+            android:text="author"/>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/collect_img_adper"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_weight="1"
+        android:layout_marginRight="10dp"
+        android:src="@mipmap/ic_launcher"/>
+
+</LinearLayout>
